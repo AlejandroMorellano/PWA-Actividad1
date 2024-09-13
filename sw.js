@@ -6,11 +6,12 @@ self.addEventListener('install',(event)=>{
 
 self.addEventListener('fetch', (event)=>{
     console.log(event.request.url);
+    console.log('Estilos cambiados');
 
-    /*if(event.request.url.includes('style.css')){
+    if(event.request.url.includes('style.css')){
         const respuesta = new Response(
             `body{
-                color: blue;
+                color: white;
                 background-color: #000;
             }`,
             {
@@ -20,6 +21,6 @@ self.addEventListener('fetch', (event)=>{
             }
         );
         event.respondWith(respuesta);
-    }*/
+    }
 
 })
